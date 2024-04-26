@@ -1,3 +1,4 @@
+
 let openShopping = document.querySelector('.shopping');
 let closeShopping = document.querySelector('.closeShopping');
 let list = document.querySelector('.list');
@@ -16,39 +17,39 @@ closeShopping.addEventListener('click', ()=>{
 let products = [
     {
         id: 1,
-        name: 'Vietnamese Fresh Spring Rolls',
-        image: "https://github.com/CIS-Spring-2024/cis-2336-assignment-1-miraclenansc0de/blob/main/Order/butter%20chicken.jpg",
-        price: '$8.99'
+        name: 'Scallion Pancakes',
+        image: '1.PNG',
+        price: '$5.49'
     },
     {
         id: 2,
-        name: 'Indian Butter Chicken',
-        image: "butter chicken.jpg",
-        price: '$15.99'
-    },
-    {
-        id: 3,
-        name: 'Chinese Kung Pao Chicken',
-        image: 'C:\Users\mnans\OneDrive\Desktop\CODE\cis-2336-assignment-1-miraclenansc0de-1\Order\kung pao.jpg',
-        price: '$13.99'
-    },
-    {
-        id: 4,
-        name: 'Vietnamese Pho',
-        image: 'C:\Users\mnans\OneDrive\Desktop\CODE\cis-2336-assignment-1-miraclenansc0de-1\Order\Beef-Pho_6.jpg',
+        name: 'Sweet and Sour Pork',
+        image: '2.PNG',
         price: '$11.99'
     },
     {
+        id: 3,
+        name: 'Beef Chow Mein',
+        image: '3.PNG',
+        price: '$11.49'
+    },
+    {
+        id: 4,
+        name: 'Kung Pao Shrimp',
+        image: '4.PNG',
+        price: '$14.99'
+    },
+    {
         id: 5,
-        name: 'Thai Mango Sticky Rice',
-        image: "C:\Users\mnans\OneDrive\Desktop\CODE\cis-2336-assignment-1-miraclenansc0de-1\Order\sticky rice.jpg",
-        price: '$7.99'
+        name: 'Green Tea Ice Cream',
+        image: '5.PNG',
+        price: '$3.99'
     },
     {
         id: 6,
-        name: 'Thai Iced Tea',
-        image: "C:\Users\mnans\OneDrive\Desktop\CODE\cis-2336-assignment-1-miraclenansc0de-1\Order\iced tea.jpg",
-        price: '$3.99'
+        name: 'Lychee Soda',
+        image: '6.PNG',
+        price: '$2.99'
     }
 ];
 let listCards  = [];
@@ -60,12 +61,12 @@ function initApp(){
             <img src="image/${value.image}">
             <div class="title">${value.name}</div>
             <div class="price">${value.price.toLocaleString()}</div>
-            <button onclick="addToCart(${key})">Add To Cart</button>`;
+            <button onclick="addToCard(${key})">Add To Card</button>`;
         list.appendChild(newDiv);
     })
 }
 initApp();
-function addToCar(key){
+function addToCard(key){
     if(listCards[key] == null){
         // copy product form list to list card
         listCards[key] = JSON.parse(JSON.stringify(products[key]));
